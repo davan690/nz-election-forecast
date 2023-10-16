@@ -1,7 +1,14 @@
 # Install latest version of nzelect with most recent polling data
 # (more up to date than the CRAN version)
 
-devtools::install_github("ellisp/nzelect/pkg1")
+# devtools::install_github("ellisp/nzelect/pkg1")
+install.packages("Cairo", repo = "https://RForge.net")
+install.packages("GGally")
+install.packages("extrafont")
+install.packages("rstan")
+install.packages("directlabels")
+#install.packages("frs")
+devtools::install_github("ellisp/frs-r-package/pkg")
 library(Cairo)
 library(tidyverse)
 library(magrittr)
@@ -29,8 +36,6 @@ library(lubridate)
 library(frs)
 library(glue)
 library(ggExtra)
-
-
 
 rstan_options(auto_write = TRUE)
 options(mc.cores = 7)
